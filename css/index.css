@@ -1,1 +1,414 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  opacity: 0.7;
+}
+/* Variables */
+/* Mixins */
+/* CSS/LESS */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container a {
+  color: #53CAEC;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .container a {
+    color: white;
+  }
+}
+.container h2 {
+  color: #EE6471;
+}
+@media (max-width: 500px) {
+  .container h2 {
+    color: white;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    background: #53CAEC;
+  }
+}
+.container nav {
+  display: flex;
+  padding-top: 4%;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .container nav {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
+.container nav a {
+  font-size: 2.5rem;
+  font-family: 'Luckiest Guy', Arial, sans-serif;
+  letter-spacing: 0.2rem;
+}
+@media (max-width: 500px) {
+  .container nav a {
+    padding-top: 4%;
+  }
+}
+.container .name-and-job {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 5%;
+}
+.container .name-and-job h1 {
+  font-size: 7.5rem;
+  margin-bottom: 5%;
+  font-family: 'Luckiest Guy', Arial, sans-serif;
+  letter-spacing: 0.4rem;
+}
+@media (max-width: 500px) {
+  .container .name-and-job h1 {
+    font-size: 4.5rem;
+  }
+}
+.container .name-and-job h2 {
+  font-size: 5rem;
+  text-decoration: underline;
+  font-family: Staatliches, Arial, sans-serif;
+}
+@media (max-width: 500px) {
+  .container .name-and-job h2 {
+    font-size: 3rem;
+  }
+}
+.container .name-and-job img {
+  border-radius: 2%;
+  margin-bottom: 5%;
+  width: 100%;
+  height: 200px;
+}
+@media (max-width: 500px) {
+  .container .name-and-job img {
+    width: 95%;
+  }
+}
+.container .intro-content {
+  font-size: 1.8rem;
+  margin: 0 5%;
+  margin-top: 5%;
+  border-right: 1px solid black;
+}
+@media (max-width: 500px) {
+  .container .intro-content {
+    border: 2px solid black;
+    padding: 2% 3%;
+    border-radius: 10px;
+    border-color: #FACB4C;
+  }
+}
+.container .intro-content h2 {
+  font-size: 5rem;
+  text-decoration: underline;
+}
+.container .intro-content p {
+  margin-top: 3%;
+  padding-right: 8%;
+  font-size: 2.2rem;
+}
+.container .main-content {
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .container .main-content {
+    flex-direction: column;
+    margin-top: 5%;
+  }
+}
+.container .main-content .skills {
+  font-size: 1.8rem;
+  margin: 0 5%;
+  margin-top: 5%;
+}
+@media (max-width: 500px) {
+  .container .main-content .skills {
+    border: 2px solid black;
+    padding: 2% 3%;
+    border-radius: 10px;
+    border-color: #EE6471;
+  }
+}
+.container .main-content .skills,
+.container .main-content .skills ul {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .container .main-content .skills,
+  .container .main-content .skills ul {
+    margin-left: 5%;
+  }
+}
+.container .main-content .skills h2 {
+  font-size: 5rem;
+  text-decoration: underline;
+}
+.container .main-content .skills li,
+.container .main-content .skills ul {
+  margin-top: 5%;
+  font-size: 2.2rem;
+}
+.container .main-content .skills li {
+  list-style: circle;
+}
+.container .bottom-content {
+  font-size: 1.8rem;
+  margin: 0 5%;
+  margin-top: 5%;
+  width: 100%;
+}
+.container .bottom-content h2 {
+  font-size: 5rem;
+  text-decoration: underline;
+}
+.container .work {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  opacity: 1;
+  background: #53CAEC;
+  border-radius: 5px;
+  padding: 4%;
+  margin-bottom: 5%;
+  width: 95%;
+}
+@media (max-width: 500px) {
+  .container .work {
+    flex-wrap: wrap;
+    width: 90%;
+    background: white;
+  }
+}
+.container .work h4 {
+  font-size: 2.6rem;
+  text-decoration: underline;
+  margin-bottom: 10%;
+  color: darkblue;
+}
+@media (max-width: 500px) {
+  .container .work h4 {
+    font-size: 2.2rem;
+  }
+}
+.container .resumeSheet li {
+  margin-bottom: 5%;
+  font-size: 2.2rem;
+}
+.container .resumeExp {
+  list-style: circle;
+  margin-left: 7%;
+}
+.container .resumeExp li {
+  margin-bottom: 5%;
+  font-size: 2.2rem;
+}
+.container .resumeColumn1 {
+  border: 2px solid black;
+  padding: 2% 3%;
+  border-radius: 10px;
+  border-color: #EE6471;
+}
+@media (max-width: 500px) {
+  .container .resumeColumn1 {
+    display: none;
+  }
+}
+.container .resumeColumn2 {
+  border: 2px solid black;
+  padding: 2% 3%;
+  border-radius: 10px;
+  border-color: #CA4388;
+}
+@media (max-width: 500px) {
+  .container .resumeColumn2 {
+    display: none;
+  }
+}
+.container .resumeColumn3 {
+  border: 2px solid black;
+  padding: 2% 3%;
+  border-radius: 10px;
+  border-color: #FACB4C;
+}
+@media (max-width: 500px) {
+  .container .resumeColumn3 {
+    display: none;
+  }
+}
+.container .resumeColumnMobile {
+  display: none;
+}
+@media (max-width: 500px) {
+  .container .resumeColumnMobile {
+    display: block;
+  }
+  .container .resumeColumnMobile ul {
+    list-style: circle;
+    margin-left: 5%;
+  }
+  .container .resumeColumnMobile li {
+    margin-bottom: 3%;
+  }
+}
+.container .main-content,
+.container .bottom-content {
+  font-family: Staatliches, Arial, sans-serif;
+}
+@media (max-width: 500px) {
+  .container .bottom-content {
+    border: 2px solid black;
+    padding: 2% 3%;
+    border-radius: 10px;
+    border-color: #CA4388;
+    width: 90%;
+  }
+}
