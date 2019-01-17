@@ -57,3 +57,293 @@ html, body {
     height: 100%;
 }
 
+html{
+  font-size: 62.5%
+}
+
+body{
+  font-size: 1.6rem;
+  opacity: .7;
+}
+
+
+/* Variables */
+@standardMargin: 5%;
+@standardFontSize: 1.8rem;
+@contentFontSize: 2.2rem;
+@h2FontSize: 5rem;
+@standardPadding: 4%;
+@luckyFont:'Luckiest Guy', Arial, sans-serif;
+@mainContentFont: Staatliches, Arial, sans-serif;
+//brand colors
+@color1: #EE6471;
+@color2: #53CAEC;
+@color3: #CA4388;
+@color4: #FACB4C;
+
+/* Mixins */
+.customContent(){
+  font-size: @standardFontSize;
+  margin: 0 @standardMargin;
+  margin-top: @standardMargin;
+}
+
+.customH2(){
+  font-size: @h2FontSize;
+  text-decoration: underline;
+}
+
+.customColumns(){
+  border: 2px solid black;
+  padding: 2% 3%;
+  border-radius: 10px;
+}
+
+
+/* CSS/LESS */
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  
+    a{
+      color: @color2;
+      text-decoration: none;
+
+      @media(max-width: 500px){
+        color: white;
+      }
+    }
+
+    h2{
+      color: @color1;
+
+      @media(max-width: 500px){
+        color: white;
+      }
+    }
+
+    @media(max-width: 500px){
+      background: @color2;
+    }
+    nav{
+      display: flex;
+      padding-top: @standardPadding;
+      justify-content: space-around;
+
+      @media(max-width: 500px){
+      flex-flow: column wrap;
+      align-items: center;
+    }
+  
+    a{
+      font-size: 2.5rem;
+      font-family: @luckyFont;
+      letter-spacing: .2rem;
+
+      @media(max-width: 500px){
+        padding-top: @standardPadding;
+      }
+    }
+  }
+  .name-and-job{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: @standardMargin;
+
+    h1{
+      font-size: 7.5rem;
+      margin-bottom: @standardMargin;
+      font-family: @luckyFont;
+      letter-spacing: .4rem;
+
+      @media(max-width: 500px){
+        font-size: 4.5rem;
+      }
+    }
+
+    h2{
+      .customH2;
+      font-family: @mainContentFont;
+
+      @media(max-width: 500px){
+        font-size: 3rem;
+      }
+    }
+
+    img{
+      border-radius: 2%;
+      margin-bottom: @standardMargin;
+      width: 100%;
+      height: 200px;
+
+      @media(max-width: 500px){
+        width: 95%;
+      }
+    }
+  }//Name and Job Container
+  
+  .intro-content{
+    .customContent;
+    border-right: 1px solid black;
+
+    @media(max-width: 500px){
+      .customColumns;
+      border-color: @color4;
+    }
+
+    h2{
+      .customH2;
+    }
+
+    p{
+      margin-top: 3%;
+      padding-right: @standardPadding + 4;
+      font-size: @contentFontSize;
+    }
+  }// Intro Content Container
+
+  .main-content{
+    display: flex;
+    width: 100%;
+
+    @media(max-width: 500px){
+      flex-direction: column;
+      margin-top: @standardMargin;
+    }
+
+    .skills{
+      .customContent;
+
+      @media(max-width: 500px){
+        .customColumns;
+        border-color: @color1;
+      }
+    }
+    .skills, .skills ul{
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-start;
+      justify-content: center;
+
+      @media(max-width: 500px){
+        margin-left: 5%;
+      }
+    }
+    .skills h2{
+      .customH2;
+    }
+    .skills li, .skills ul{
+      margin-top: @standardMargin;
+      font-size: @contentFontSize;
+    } 
+
+    .skills li{
+      list-style: circle;
+    }
+  }//Main Content Container
+  .bottom-content{
+    .customContent;
+    width: 100%;
+
+    h2{
+      .customH2;
+    }
+  }
+  .work{
+    display: flex;
+    justify-content: space-between;
+    margin-top: @standardMargin;
+    opacity: 1;
+    background: @color2;
+    border-radius: 5px;
+    padding: @standardPadding;
+    margin-bottom: @standardMargin;
+    width: 95%;
+
+    @media(max-width: 500px){
+      flex-wrap: wrap;
+      width: 90%;
+      background: white;
+    }
+
+    h4{
+      font-size: 2.6rem;
+      text-decoration: underline;
+      margin-bottom: 10%;
+      color: darkblue;
+
+      @media(max-width: 500px){
+        font-size: 2.2rem;
+      }
+    }
+  }
+  .resumeSheet li{
+    margin-bottom: @standardMargin;
+    font-size: @contentFontSize;
+  }
+
+  .resumeExp{
+    list-style: circle;
+    margin-left: 7%;
+
+    li{
+      margin-bottom: @standardMargin;
+      font-size: @contentFontSize;
+    }
+  }
+  .resumeColumn1{
+    .customColumns;
+    border-color: @color1;
+
+    @media(max-width: 500px){
+     display: none
+   }
+  }
+  .resumeColumn2{
+    .customColumns;
+    border-color: @color3;
+
+    @media(max-width: 500px){
+      display: none
+    }
+  }
+  .resumeColumn3{
+    .customColumns;
+    border-color: @color4;
+
+    @media(max-width: 500px){
+      display: none;
+    }
+  }
+  .resumeColumnMobile{
+    display: none;
+
+    @media(max-width: 500px){
+      display: block;
+      ul{
+        list-style: circle;
+        margin-left: @standardMargin;
+      }
+      li{
+        margin-bottom: 3%;
+      }
+   }
+  }
+  .main-content, .bottom-content{
+    font-family: @mainContentFont;
+  }
+  @media(max-width: 500px){
+    .bottom-content{
+      .customColumns;
+      border-color: @color3;
+      width: 90%
+    }
+  }
+}
+
+
+
+
+
+
